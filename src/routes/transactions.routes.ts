@@ -14,10 +14,9 @@ const transactionsRouter = Router();
 transactionsRouter.post('/', async (request, response) => {
   const { title, value, type, category } = request.body;
 
-  console.log(title)
-  const createTransection = new CreateTransactionService();
+  const createTransaction = new CreateTransactionService();
 
-  const transaction = await createTransection.execute({
+  const transaction = await createTransaction.execute({
     title,
     value,
     type,

@@ -14,7 +14,7 @@ class CreateTransactionService {
     const transactionsRepository = getCustomRepository(TransactionRepository);
     const transaction = transactionsRepository.create({
         title, value, type
-    })
+    });
 
     await transactionsRepository.save(transaction);
     return transaction;
